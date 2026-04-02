@@ -34,7 +34,7 @@ class SSHManager:
     def connect(self, hostname, username, password, port=22):
         """Подключиться к серверу по SSH"""
         try:
-            self.log(f"🔌 Подключение к {hostname}:{port}...")
+            self.log(f"Подключение к {hostname}:{port}...")
             self._ssh_password = password
             self.client = paramiko.SSHClient()
             self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
